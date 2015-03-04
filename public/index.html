@@ -1,186 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Scaffold styles, variables and structure for Bourbon projects.">
-  <title>Bitters - Example</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!--[if lt IE 9]>
-  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+<html id="patternlab-html">
+<head id="patternlab-head">
+  <title id="title">Pattern Lab</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="css/material-icons.css" media="all" />
+  <link rel="stylesheet" href="css/styleguide.css" media="all" />
+  <link rel="stylesheet" href="css/style.css" media="all" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="styleguide/js/vendor/jquery.js"><\/script>')</script>
 </head>
-<body class="example">
-<header class="main">
-  <h1><a href="/">Bitters</a></h1>
-  <nav class="actions">
-    <a href="/example.html">Example</a>
-    <a href="//github.com/thoughtbot/bitters">GitHub</a>
-  </nav>
-</header>
-
-<section class="container">
-  <div class="wrapper">
-    <h1 id="main">Bitters example page</h1>
-    
-    <p>The purpose of this HTML is to help determine what default settings are with Bitters and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
-    
-    <hr>
-    
-    <h1 id="headings">Headings</h1>
-    
-    <h1>h1. Heading</h1>
-    <h2>h2. Heading</h2>
-    <h3>h3. Heading</h3>
-    <h4>h4. Heading</h4>
-    <h5>h5. Heading</h5>
-    <h6>h6. Heading</h6>
-    
-    <hr>
-    
-    <h1 id="paragraph">Paragraph</h1>
-    
-    <p>Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
-    
-    <p>Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
-    
-    <hr>
-    
-    <h1 id="list_types">List Types</h1>
-    
-    <h3>Definition List</h3>
-    <dl>
-      <dt>Definition List Title</dt>
-      <dd>This is a definition list division.</dd>
-    </dl>
-    
-    <h3>Ordered List</h3>
-    <ol>
-      <li>List Item 1</li>
-      <li>List Item 2</li>
-      <li>List Item 3</li>
-    </ol>
-    
-    <h3>Unordered List</h3>
-    <ul>
-      <li>List Item 1</li>
-      <li>List Item 2</li>
-      <li>List Item 3</li>
-    </ul>
-    
-    <h3>%default-ol Ordered List</h3>
-    <ol class="default">
-      <li>List Item 1</li>
-      <li>List Item 2</li>
-      <li>List Item 3</li>
-    </ol>
-    
-    <h3>%default-ul Unordered List</h3>
-    <ul class="default">
-      <li>List Item 1</li>
-      <li>List Item 2</li>
-      <li>List Item 3</li>
-    </ul>
-    
-    <hr>
-    
-    <h1 id="form_elements">Fieldsets and Form Elements</h1>
-    
-    <fieldset>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
+<body  id="patternlab-body">
+  <!--Style Guide Header-->
+  <header class="sg-header" role="banner">
+    <a href="#sg-nav-container" class="sg-nav-toggle">Menu</a>
+    <div class="sg-nav-container" id="sg-nav-container">
       
-      <form>
-        <h2>Form Element</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.</p>
-        
-        <p><label for="text_field">Text Field:</label>
-          <input type="text" id="text_field" /></p>
+      <!--sg-controls-->
+      <div class="sg-controls" id="sg-controls">
+        <div class="sg-control-content">
+          <ul class="sg-control">
+            <li class="sg-size">
+              <div class="sg-current-size">
+                <form id="sg-form">
+                  Size 
+                  <label><input type="text" class="sg-input sg-size-px" value="---">px / </label>
+                  <label><input type="text" class="sg-input sg-size-em" value="---">em</label>
+                </form><!--end #sg-form-->
+              </div><!--end #sg-current-size-->
+              <ul class="sg-acc-panel sg-size-options">
+                <li><a href="#" id="sg-size-s">S</a></li>
+                <li><a href="#" id="sg-size-m">M</a></li>
+                <li><a href="#" id="sg-size-l">L</a></li>
+                <li><a href="#" id="sg-size-full">Full</a></li>
+                <li><a href="#" id="sg-size-random">Random</a></li>
+                <li><a href="#" class="mode-link" id="sg-size-disco">Disco</a></li>
+                <li><a href="#" class="mode-link" id="sg-size-hay">Hay!</a></li>
+              </ul>
+            </li>
+            <li class="sg-mqs">
+              <a href="#" class="mode-link sg-acc-handle" id="sg-size-mq" title="Media queries in stylesheet">MQ</a>
+              <ul class="sg-acc-panel sg-left" id="sg-mq">
+                <li><a href="#">105em</a></li>
+                <li><a href="#">117em</a></li>
+                <li><a href="#">1200px</a></li>
+                <li><a href="#">130em</a></li>
+                <li><a href="#">1392px</a></li>
+                <li><a href="#">1680px</a></li>
+                <li><a href="#">1872px</a></li>
+                <li><a href="#">2080px</a></li>
+                <li><a href="#">24em</a></li>
+                <li><a href="#">29.75em</a></li>
+                <li><a href="#">39.8em</a></li>
+                <li><a href="#">40em</a></li>
+                <li><a href="#">45em</a></li>
+                <li><a href="#">48em</a></li>
+                <li><a href="#">55.5em</a></li>
+                <li><a href="#">61.5em</a></li>
+                <li><a href="#">640px</a></li>
+                <li><a href="#">720px</a></li>
+                <li><a href="#">73em</a></li>
+                <li><a href="#">75em</a></li>
+                <li><a href="#">87em</a></li>
+                <li><a href="#">888px</a></li>
+                <li><a href="#">984px</a></li>
+              </ul>
+            </li>
+            <li class="sg-view">
+              <a href="#" class="sg-acc-handle sg-control-trigger mdi-action-visibility" id="sg-t-toggle" title="View"><span class="is-vishidden">View</span></a>
+              <ul class="sg-view sg-acc-panel sg-right sg-checklist" id="sg-view">
+                <li><a href="#" class="mdi-communication-message" id="sg-t-annotations">Annotations</a></li>
+                <li><a href="#" class="mdi-action-settings-ethernet" id="sg-t-code">Code</a></li>
+                <li><a href="#" target="_blank" id="sg-raw" class="mdi-action-open-in-new">Open in new window</a></li>
+              </ul>
+            </li>
+            <li class="sg-tools">
+              <a href="#" class="sg-acc-handle sg-tools-toggle mdi-action-settings" id="sg-tools-toggle" title="Tools"><span class="is-vishidden">Tools</span></a>
+              <ul class="sg-acc-panel sg-right sg-checklist">
+                <li><a href="http://github.com/kevinglover/ggs-pattern-bourbon" class="mdi-action-open-in-new" target="_blank">Open in GitHub</a></li>
+              </ul>
+            </li>
+          </ul>
           
-          <p><label for="text_area">Text Area:</label>
-            <textarea id="text_area"></textarea></p>
-            
-            <p><label for="select_element">Select Element:</label>
-              <select name="select_element">
-                <optgroup label="Option Group 1">
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </optgroup>
-                <optgroup label="Option Group 2">
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </optgroup>
-              </select></p>
-              
-              <p><label for="radio_buttons">Radio Buttons:</label>
-                <label>
-                  <input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1
-                </label>
-                <label>
-                  <input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2
-                </label>
-                <label>
-                  <input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3
-                </label>
-              </p>
-              
-              <p><label for="checkboxes">Checkboxes:</label>
-                <label>
-                  <input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Checkbox 1
-                </label>
-                <label>
-                  <input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Checkbox 2
-                </label>
-                <label>
-                  <input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Checkbox 3
-                </label>
-              </p>
-              
-              <p><label for="password">Password:</label>
-                <input type="password" class="password" name="password" />
-              </p>
-              
-              <p><label for="file">File Input:</label>
-                <input type="file" class="file" name="file" />
-              </p>
-              
-              
-              <p><input type="submit" value="Submit" /></p>
-            </form>
-          </fieldset>
-          
-          <hr>
-          
-          <h1 id="tables">Tables</h1>
-          
-          <table cellspacing="0" cellpadding="0">
-            <tr>
-              <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
-            </tr>
-            <tr>
-              <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-            </tr>
-            <tr class="even">
-              <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-            </tr>
-            <tr>
-              <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-            </tr>
-          </table>
         </div>
-        
-      </section>
-      
-      <footer class="main">
-        <p>Bourbon is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>. Tweet your questions or suggestions to <a href="//twitter.com/bourbonsass">@bourbonsass</a> and while you’re at it follow us too.</p>
-        <p>Copyright &copy; 2013&ndash;2015 <a href="//thoughtbot.com">thoughtbot, inc</a>. Bourbon is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/bourbon/blob/master/LICENSE.md">license</a>.</p>
-        <nav class="actions">
-          <a href="/example.html">Example</a>
-          <a href="//github.com/thoughtbot/bitters">GitHub</a>
-        </nav>
-      </footer>
-    </body>
-    </html>
+      </div>
+      <!--End #sg-controls-->    
+    </div>
+  </header>
+  <!--End Style Guide Header-->
+  
+  <!-- Iframe -->
+  <div id="sg-vp-wrap">
+    <div id="sg-cover"></div>
+    <div id="sg-gen-container">
+      <iframe id="sg-viewport" sandbox="allow-same-origin allow-scripts"></iframe>
+      <div id="sg-rightpull-container">
+        <div id="sg-rightpull"></div>
+      </div>
+    </div>
+  </div>
+  <!--end iFrame-->
+  
+  <script src="js/url-handler.js"></script>
+  <script src="js/data-saver.js"></script>
+  <script src="js/styleguide.js"></script>
+</body>
+</html>
+  

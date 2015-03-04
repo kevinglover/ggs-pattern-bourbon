@@ -14,7 +14,8 @@ module.exports = function(grunt) {
         files: [
         { expand: true, cwd: './source/', src: '*.html', dest: './public/'},
         { expand: true, cwd: './source/js/', src: '*', dest: './public/js/'},
-        { expand: true, cwd: './source/css/', src: 'style.css', dest: './public/css/' },
+        { expand: true, cwd: './source/css/', src: '*.css', dest: './public/css/' },
+        { expand: true, cwd: './source/css/', src: '*.map', dest: './public/css/' },
         { expand: true, cwd: './source/images/', src: ['*.png', '*.jpg', '*.gif', '*.jpeg'], dest: './public/images/' },
         { expand: true, cwd: './source/images/sample/', src: ['*.png', '*.jpg', '*.gif', '*.jpeg'], dest: './public/images/sample/'},
         { expand: true, cwd: './source/fonts/', src: '*', dest: './public/fonts/'},
@@ -46,9 +47,7 @@ module.exports = function(grunt) {
           livereload: true
         },
         files: [
-        'source/_patterns/**/*.mustache',
-        'source/_patterns/**/*.json',
-        'source/_data/*.json'
+        'source/index.html'
         ],
         tasks: ['default']
       }
@@ -62,6 +61,7 @@ module.exports = function(grunt) {
         },
         files: {
           './source/css/style.css': './source/css/style.scss',
+          './source/css/styleguide.css': './source/css/styleguide.scss',
         }
       }
     },
