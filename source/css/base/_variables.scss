@@ -1,18 +1,29 @@
+// General variables
+$line: 24;
+$column: 100% / 18;
+$font-size: 16;
+$em: $font-size * 1;
+
 // Typography
 $base-font-family: $helvetica;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: $font-size / 16 * 1em;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height-calc:#{$line / $font-size};
+$base-line-height: #{$base-line-height-calc}em;
 $heading-line-height: 1.2;
+
+// Modular Scale
+$modular-scale-ratio: $augmented-fourth;
+$modular-scale-base: $base-font-size;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$base-spacing: $base-line-height;
+$small-spacing: #{number($base-line-height-calc) / 2}em;
 $base-z-index: 0;
 
 // Colors

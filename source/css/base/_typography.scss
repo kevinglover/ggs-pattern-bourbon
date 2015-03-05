@@ -1,3 +1,50 @@
+/*
+*
+*	Zoomable baseline grid
+*	type size presets
+*
+*/
+
+@mixin line-height($scale) {
+  line-height: em( strip-units(modular-scale($scale,$line)) / strip-units(modular-scale($scale)) );
+}
+
+@mixin small {
+  /* 13px / 18px */
+  font-size: modular-scale(-1);
+  @include line-height(-1);
+}
+@mixin normal {
+  /* 16px / 24px */
+  font-size: modular-scale(1);
+  @include line-height(1);
+}
+
+@mixin large {
+  /* 26 / 36px */
+  font-size: modular-scale(2);
+  @include line-height(2);
+}
+
+@mixin huge {
+  /* 42px / 48px */
+  font-size: modular-scale(3);
+  @include line-height(3);
+}
+
+@mixin massive {
+  /* 68px / 72px */
+  font-size: modular-scale(4);
+  @include line-height(4);
+}
+
+@mixin gigantic {
+  /* 110px / 120px */
+  font-size: modular-scale(5);
+  @include line-height(5);
+}
+
+
 body {
   @include font-feature-settings("kern", "liga", "pnum");
   -webkit-font-smoothing: antialiased;
@@ -17,10 +64,39 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+  clear:both;
+}
+
+h1, h2 {
+  @include large;
+}
+
+h1{
+  margin-bottom: 0;
+}
+
+h2 {
+  font-weight: normal;
+  margin-bottom: 0
+}
+
+h3 {
+  @include normal;
+  margin: modular-scale(-2) 0 modular-scale(-4);
+}
+
+h4,h5,h6{
+  margin: (modular-scale(-3)+0.1em) 0 modular-scale(-3);
 }
 
 p {
   margin: 0 0 $small-spacing;
+}
+
+article{
+  p{
+    @include hyphens(auto);
+  }
 }
 
 a {
@@ -52,4 +128,18 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+/* @media screen and (min-width: 640px) */
+@media screen and (min-width: 40em) {
+  
+  body {
+    font-size: #{($font-size + 1.414) / $em}em;
+  }
+  
+  h1 {
+    @include huge;
+    line-height: 1.6em;
+  }
+  
 }
