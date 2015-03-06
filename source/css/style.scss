@@ -3,7 +3,7 @@
 @import "../../bower_components/neat/app/assets/stylesheets/_neat";
 @import "base/base";
 
-.container{
+#masthead, #figures, #content, footer .inner{
   @include container;
 }
 
@@ -28,10 +28,4 @@ ol {
       width: 23px;
     }
   }
-}
-
-
-// Grid.html
-#masthead, #figures, #content, footer .inner{
-  @include container;
 }

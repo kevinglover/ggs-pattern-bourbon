@@ -452,31 +452,31 @@ picture {
   max-width: 100%;
 }
 
-.container {
+#masthead, #figures, #content, footer .inner {
   margin: 0 5.55555556%;
 }
 @media screen and (min-width: 45em) {
-  .container {
+  #masthead, #figures, #content, footer .inner {
     margin: 0 16.66666667%;
   }
 }
 @media screen and (min-width: 55.5em) {
-  .container {
+  #masthead, #figures, #content, footer .inner {
     margin: 0 5.55555556%;
   }
 }
 @media screen and (min-width: 87em) {
-  .container {
+  #masthead, #figures, #content, footer .inner {
     margin: 0 16.66666667%;
   }
 }
 @media screen and (min-width: 156em) {
-  .container {
+  #masthead, #figures, #content, footer .inner {
     margin: 0 27.77777778%;
   }
 }
 @media screen and (min-width: 156em) {
-  .container {
+  #masthead, #figures, #content, footer .inner {
     margin: 0 27.77777778%;
   }
 }
@@ -514,35 +514,6 @@ ol > li::after {
   -o-transform: rotate(45deg) skew(20deg, 30deg);
   transform: rotate(45deg) skew(20deg, 30deg);
   width: 23px;
-}
-
-#masthead, #figures, #content, footer .inner {
-  margin: 0 5.55555556%;
-}
-@media screen and (min-width: 45em) {
-  #masthead, #figures, #content, footer .inner {
-    margin: 0 16.66666667%;
-  }
-}
-@media screen and (min-width: 55.5em) {
-  #masthead, #figures, #content, footer .inner {
-    margin: 0 5.55555556%;
-  }
-}
-@media screen and (min-width: 87em) {
-  #masthead, #figures, #content, footer .inner {
-    margin: 0 16.66666667%;
-  }
-}
-@media screen and (min-width: 156em) {
-  #masthead, #figures, #content, footer .inner {
-    margin: 0 27.77777778%;
-  }
-}
-@media screen and (min-width: 156em) {
-  #masthead, #figures, #content, footer .inner {
-    margin: 0 27.77777778%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
