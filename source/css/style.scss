@@ -3,6 +3,14 @@
 @import "../../bower_components/neat/app/assets/stylesheets/_neat";
 @import "base/base";
 
+.container{
+  @include container;
+}
+
+.wrapper{
+  @include wrapper;
+}
+
 ol {
   > li {
     background-color: #F4F5F7;
@@ -20,4 +28,10 @@ ol {
       width: 23px;
     }
   }
+}
+
+
+// Grid.html
+#masthead, #figures, #content, footer .inner{
+  @include container;
 }

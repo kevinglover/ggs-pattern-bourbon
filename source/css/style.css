@@ -149,6 +149,10 @@ html {
   box-sizing: inherit;
 }
 
+/*
+*  Simple elastic gutters
+*  Note: box-sizing will not work in IE6-7
+*/
 button, input[type="button"], input[type="reset"], input[type="submit"],
 button {
   -webkit-appearance: none;
@@ -331,6 +335,21 @@ body {
   font-size: 1em;
   line-height: 1.5em;
 }
+@media screen and (min-width: 40em) {
+  body {
+    font-size: 125%;
+  }
+}
+@media screen and (min-width: 87em) {
+  body {
+    font-size: 150%;
+  }
+}
+@media screen and (min-width: 117em) {
+  body {
+    font-size: 175%;
+  }
+}
 
 h1,
 h2,
@@ -354,10 +373,31 @@ h1, h2 {
 h1 {
   margin-bottom: 0;
 }
+@media screen and (min-width: 156em) {
+  h1 {
+    /* 68px / 72px */
+    font-size: 3.99758436em;
+    line-height: 1.5em;
+  }
+}
+@media screen and (min-width: 117em) {
+  h1 {
+    /* 42px / 48px */
+    font-size: 2.82714594em;
+    line-height: 1.5em;
+  }
+}
 
 h2 {
   font-weight: normal;
   margin-bottom: 0;
+}
+@media screen and (min-width: 156em) {
+  h2 {
+    /* 42px / 48px */
+    font-size: 2.82714594em;
+    line-height: 1.5em;
+  }
 }
 
 h3 {
@@ -373,6 +413,10 @@ h4, h5, h6 {
 
 p {
   margin: 0 0 0.75em;
+}
+
+header h1 + p, header h2 + p {
+  font-size: 120%;
 }
 
 article p {
@@ -408,19 +452,43 @@ picture {
   max-width: 100%;
 }
 
-/* @media screen and (min-width: 640px) */
-@media screen and (min-width: 40em) {
-  body {
-    font-size: 1.088375em;
-  }
-
-  h1 {
-    /* 42px / 48px */
-    font-size: 2.82714594em;
-    line-height: 1.5em;
-    line-height: 1.6em;
+.container {
+  margin: 0 5.55555556%;
+}
+@media screen and (min-width: 45em) {
+  .container {
+    margin: 0 16.66666667%;
   }
 }
+@media screen and (min-width: 55.5em) {
+  .container {
+    margin: 0 5.55555556%;
+  }
+}
+@media screen and (min-width: 87em) {
+  .container {
+    margin: 0 16.66666667%;
+  }
+}
+@media screen and (min-width: 156em) {
+  .container {
+    margin: 0 27.77777778%;
+  }
+}
+@media screen and (min-width: 156em) {
+  .container {
+    margin: 0 27.77777778%;
+  }
+}
+
+.wrapper {
+  padding: 0 0.75em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 ol > li {
   background-color: #F4F5F7;
   background-image: -webkit-linear-gradient( right , #FFF, #F4F5F7);
@@ -446,6 +514,35 @@ ol > li::after {
   -o-transform: rotate(45deg) skew(20deg, 30deg);
   transform: rotate(45deg) skew(20deg, 30deg);
   width: 23px;
+}
+
+#masthead, #figures, #content, footer .inner {
+  margin: 0 5.55555556%;
+}
+@media screen and (min-width: 45em) {
+  #masthead, #figures, #content, footer .inner {
+    margin: 0 16.66666667%;
+  }
+}
+@media screen and (min-width: 55.5em) {
+  #masthead, #figures, #content, footer .inner {
+    margin: 0 5.55555556%;
+  }
+}
+@media screen and (min-width: 87em) {
+  #masthead, #figures, #content, footer .inner {
+    margin: 0 16.66666667%;
+  }
+}
+@media screen and (min-width: 156em) {
+  #masthead, #figures, #content, footer .inner {
+    margin: 0 27.77777778%;
+  }
+}
+@media screen and (min-width: 156em) {
+  #masthead, #figures, #content, footer .inner {
+    margin: 0 27.77777778%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
