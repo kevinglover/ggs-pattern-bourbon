@@ -12,6 +12,9 @@
   
   @include media($large-screen-up) {
     margin: 0 $column;
+    .wrapper{
+      padding:0;
+    }
   }
   
   @include media($huge-screen-up) {

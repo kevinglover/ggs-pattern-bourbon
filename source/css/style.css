@@ -464,6 +464,9 @@ picture {
   #masthead, #figures, #content, footer .inner {
     margin: 0 5.55555556%;
   }
+  #masthead .wrapper, #figures .wrapper, #content .wrapper, footer .inner .wrapper {
+    padding: 0;
+  }
 }
 @media screen and (min-width: 87em) {
   #masthead, #figures, #content, footer .inner {
