@@ -22,6 +22,121 @@ html {
   box-sizing: inherit;
 }
 
+/*
+*
+*  Margin, padding, and border resets
+*  except for form elements
+*
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*
+*
+*  Consistency fixes
+*  adopted from http://necolas.github.com/normalize.css/
+*
+*/
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section, audio, canvas, video {
+  display: block;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+input, textarea, button, select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+textarea {
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+*
+*  Simple fluid media
+*
+*/
+figure {
+  position: relative;
+}
+
+figure img, figure object, figure embed, figure video {
+  max-width: 100%;
+  display: block;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -34,6 +149,10 @@ html {
   box-sizing: inherit;
 }
 
+/*
+*  Simple elastic gutters
+*  Note: box-sizing will not work in IE6-7
+*/
 button, input[type="button"], input[type="reset"], input[type="submit"],
 button {
   -webkit-appearance: none;
@@ -87,7 +206,7 @@ select {
 
 label {
   font-weight: 600;
-  margin-bottom: 0.375em;
+  margin-bottom: 0.75em/2;
 }
 label.required::after {
   content: "*";
@@ -106,8 +225,8 @@ textarea {
   box-sizing: border-box;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
-  margin-bottom: 0.75em;
-  padding: 0.5em;
+  margin-bottom: 1.5em/2;
+  padding: 1.5em/3;
   transition: border-color;
   width: 100%;
 }
@@ -139,7 +258,7 @@ input[type="search"] {
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-  margin-right: 0.375em;
+  margin-right: 0.75em/2;
 }
 
 input[type="file"] {
@@ -199,6 +318,12 @@ th {
   vertical-align: middle;
 }
 
+/*
+*
+*	Zoomable baseline grid
+*	type size presets
+*
+*/
 body {
   -webkit-font-feature-settings: "kern", "liga", "pnum";
   -moz-font-feature-settings: "kern", "liga", "pnum";
@@ -208,7 +333,22 @@ body {
   color: #333;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 40em) {
+  body {
+    font-size: 125%;
+  }
+}
+@media screen and (min-width: 87em) {
+  body {
+    font-size: 150%;
+  }
+}
+@media screen and (min-width: 117em) {
+  body {
+    font-size: 175%;
+  }
 }
 
 h1,
@@ -221,10 +361,69 @@ h6 {
   font-size: 1em;
   line-height: 1.2;
   margin: 0 0 0.75em;
+  clear: both;
+}
+
+h1, h2 {
+  /* 26 / 36px */
+  font-size: 1.999396em;
+  line-height: 1.5em;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 156em) {
+  h1 {
+    /* 68px / 72px */
+    font-size: 3.99758436em;
+    line-height: 1.5em;
+  }
+}
+@media screen and (min-width: 117em) {
+  h1 {
+    /* 42px / 48px */
+    font-size: 2.82714594em;
+    line-height: 1.5em;
+  }
+}
+
+h2 {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 156em) {
+  h2 {
+    /* 42px / 48px */
+    font-size: 2.82714594em;
+    line-height: 1.5em;
+  }
+}
+
+h3 {
+  /* 16px / 24px */
+  font-size: 1.414em;
+  line-height: 1.5em;
+  margin: 0.50015105em 0 0.25015107em;
+}
+
+h4, h5, h6 {
+  margin: 0.45371361em 0 0.35371361em;
 }
 
 p {
   margin: 0 0 0.75em;
+}
+
+header h1 + p, header h2 + p {
+  font-size: 120%;
+}
+
+article p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 a {
@@ -251,6 +450,43 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+#masthead, #figures, #content, footer .inner {
+  margin: 0 5.55555556%;
+}
+@media screen and (min-width: 45em) {
+  #masthead, #figures, #content, footer .inner {
+    margin: 0 16.66666667%;
+  }
+}
+@media screen and (min-width: 55.5em) {
+  #masthead, #figures, #content, footer .inner {
+    margin: 0 5.55555556%;
+  }
+}
+@media screen and (min-width: 87em) {
+  #masthead, #figures, #content, footer .inner {
+    margin: 0 16.66666667%;
+  }
+}
+@media screen and (min-width: 156em) {
+  #masthead, #figures, #content, footer .inner {
+    margin: 0 27.77777778%;
+  }
+}
+@media screen and (min-width: 156em) {
+  #masthead, #figures, #content, footer .inner {
+    margin: 0 27.77777778%;
+  }
+}
+
+.wrapper {
+  padding: 0 0.75em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ol > li {

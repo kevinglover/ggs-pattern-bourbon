@@ -1,5 +1,5 @@
 ### Golden Grid System Bourbon Pattern Lib
-A pattern library built with [Bourbon](http://bourbon.io/) and using principles from the [Golden Grid System](goldengridsystem.com). The goal is to create an accessible fluid grid system based on folding columns!
+A pattern library built with [Bourbon](http://bourbon.io/) and using principles from the [Golden Grid System](http://goldengridsystem.com). The goal is to create an accessible fluid grid system based on folding columns!
 
 ### Getting Started
 
