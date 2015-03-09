@@ -2,7 +2,7 @@
 
 // Neat Overrides
 $column: 100% / 18;
-$gutter: 1em;
+$gutter: 0.75em;
 $grid-columns: 4;
 $max-width: none;
 
@@ -24,6 +24,7 @@ $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
 $medium-2-screen-up: new-breakpoint(min-width $medium-2-screen 8);
 
 $large-screen-up: new-breakpoint(min-width $large-screen 8);
+$large-2-screen-max: new-breakpoint(max-width $large-2-screen 16);
 $large-2-screen-up: new-breakpoint(min-width $large-2-screen 16);
 
 $huge-screen-up: new-breakpoint(min-width $huge-screen 16);
