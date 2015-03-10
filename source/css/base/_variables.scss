@@ -5,7 +5,7 @@ $font-size: 16;
 $em: $font-size * 1;
 
 // Typography
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic);
 $base-font-family:'Fira Sans', sans-serif;
 $heading-font-family: $base-font-family;
 
@@ -16,7 +16,7 @@ $base-font-size: $font-size / 16 * 1em;
 $light-font-weight:300;
 $normal-font-weight:400;
 $bold-font-weight:500;
-$extra-bold-font-weight:700;
+$ultra-bold-font-weight:900;
 $base-font-weight:$normal-font-weight;
 
 // Line height

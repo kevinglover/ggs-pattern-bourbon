@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic);
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -365,6 +365,8 @@ h6 {
   line-height: 1.2;
   margin: 0 0 0.75em;
   clear: both;
+  float: left;
+  width: 100%;
 }
 
 h1, h2 {
@@ -380,6 +382,9 @@ h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+h1 {
+  font-weight: 900;
+}
 @media screen and (min-width: 117em) {
   h1 {
     font-size: 3.99758436em;
@@ -401,13 +406,27 @@ h3, h4, h5, h6 {
 }
 
 h3 {
+  font-size: 1.999396em;
+  line-height: 1.5em;
+  margin: 0.70721358em 0 0.25015107em;
+}
+
+h4 {
   font-size: 1.414em;
   line-height: 1.5em;
   margin: 0.50015105em 0 0.25015107em;
 }
 
-h4, h5, h6 {
+h5, h6 {
   margin: 0.45371361em 0 0.35371361em;
+}
+
+h5 {
+  font-size: 110%;
+}
+
+h6 {
+  opacity: 0.6;
 }
 
 p {
