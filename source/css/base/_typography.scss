@@ -73,7 +73,7 @@ h6 {
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
   clear:both;
-  float:left;
+  display:inline-block;
   width:100%;
 }
 
@@ -82,7 +82,7 @@ h1, h2 {
   line-height: 1.1em;
   margin-top: 0.5em;
   margin-bottom: 0;
-  font-weight: $light-font-weight;
+  font-weight: $ultra-bold-font-weight;
 }
 
 h3,h4,h5,h6{
@@ -90,7 +90,6 @@ h3,h4,h5,h6{
 }
 
 h1{
-  font-weight: $ultra-bold-font-weight;
   @include media($huge-2-screen-up){
     @include massive;
   }
@@ -108,6 +107,7 @@ h2 {
 
 h3 {
   @include large;
+  font-weight: $light-font-weight;
   margin: modular-scale(-1) 0 modular-scale(-4);
 }
 

@@ -1,5 +1,6 @@
 fieldset {
-  background-color: lighten($base-border-color, 10%);
+  @extend .shadow-z-1;
+  background-color: $white;
   border: $base-border;
   margin: 0 0 $small-spacing;
   padding: $base-spacing;
@@ -50,6 +51,29 @@ textarea {
     box-shadow: $form-box-shadow-focus;
     outline: none;
   }
+}
+
+#{$all-text-inputs}{
+  &:hover,&:focus{
+    border-color: $light-blue;
+    box-shadow: none;
+  }
+  &:not(textarea) {
+      height: 28px;
+  }
+  
+  padding: 0;
+  float: none;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid $blue-grey;
+  
+  &:disabled {
+      border-style: dashed;
+  }
+
 }
 
 textarea {

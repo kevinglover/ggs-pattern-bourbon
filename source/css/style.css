@@ -154,6 +154,29 @@ html {
 *  Simple elastic gutters
 *  Note: box-sizing will not work in IE6-7
 */
+.shadow-z-1, fieldset {
+  box-shadow: 0 4px 6px 1px rgba(50, 50, 50, 0.14);
+}
+
+.shadow-z-2 {
+  box-shadow: 0 4px 6px 1px rgba(50, 50, 50, 0.16);
+}
+.shadow-z-2:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.28);
+}
+
+.shadow-z-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.shadow-z-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.shadow-z-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
 button, input[type="button"], input[type="reset"], input[type="submit"],
 button {
   -webkit-appearance: none;
@@ -191,8 +214,8 @@ button:disabled {
 }
 
 fieldset {
-  background-color: #f7f7f7;
-  border: 1px solid #ddd;
+  background-color: #FFF;
+  border: 1px solid #ECECEC;
   margin: 0 0 0.75em;
   padding: 1.5em;
 }
@@ -220,7 +243,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 select[multiple=multiple],
 textarea {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #ECECEC;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
@@ -234,7 +257,7 @@ textarea {
 input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
 select[multiple=multiple]:hover,
 textarea:hover {
-  border-color: #c4c4c4;
+  border-color: lightgray;
 }
 input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
 select[multiple=multiple]:focus,
@@ -242,6 +265,26 @@ textarea:focus {
   border-color: #477dca;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
   outline: none;
+}
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea {
+  padding: 0;
+  float: none;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid #607D8B;
+}
+input[type="color"]:hover, input[type="color"]:focus, input[type="date"]:hover, input[type="date"]:focus, input[type="datetime"]:hover, input[type="datetime"]:focus, input[type="datetime-local"]:hover, input[type="datetime-local"]:focus, input[type="email"]:hover, input[type="email"]:focus, input[type="month"]:hover, input[type="month"]:focus, input[type="number"]:hover, input[type="number"]:focus, input[type="password"]:hover, input[type="password"]:focus, input[type="search"]:hover, input[type="search"]:focus, input[type="tel"]:hover, input[type="tel"]:focus, input[type="text"]:hover, input[type="text"]:focus, input[type="time"]:hover, input[type="time"]:focus, input[type="url"]:hover, input[type="url"]:focus, input[type="week"]:hover, input[type="week"]:focus, textarea:hover, textarea:focus {
+  border-color: #03A9F4;
+  box-shadow: none;
+}
+input[type="color"]:not(textarea), input[type="date"]:not(textarea), input[type="datetime"]:not(textarea), input[type="datetime-local"]:not(textarea), input[type="email"]:not(textarea), input[type="month"]:not(textarea), input[type="number"]:not(textarea), input[type="password"]:not(textarea), input[type="search"]:not(textarea), input[type="tel"]:not(textarea), input[type="text"]:not(textarea), input[type="time"]:not(textarea), input[type="url"]:not(textarea), input[type="week"]:not(textarea), textarea:not(textarea) {
+  height: 28px;
+}
+input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, textarea:disabled {
+  border-style: dashed;
 }
 
 textarea {
@@ -279,6 +322,17 @@ ol {
   margin: 0;
   padding: 0;
 }
+ul.default {
+  list-style-type: disc;
+  margin-bottom: 0.75em;
+  padding-left: 1.5em;
+}
+ol.default {
+  list-style-type: decimal;
+  margin-bottom: 0.75em;
+  padding-left: 1.5em;
+}
+
 dl {
   margin-bottom: 0.75em;
 }
@@ -302,14 +356,14 @@ table {
 }
 
 th {
-  border-bottom: 1px solid #b7b7b7;
+  border-bottom: 1px solid #c6c6c6;
   font-weight: 600;
   padding: 0.75em 0;
   text-align: left;
 }
 
 td {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ECECEC;
   padding: 0.75em 0;
 }
 
@@ -365,7 +419,7 @@ h6 {
   line-height: 1.2;
   margin: 0 0 0.75em;
   clear: both;
-  float: left;
+  display: inline-block;
   width: 100%;
 }
 
@@ -375,16 +429,13 @@ h1, h2 {
   line-height: 1.1em;
   margin-top: 0.5em;
   margin-bottom: 0;
-  font-weight: 300;
+  font-weight: 900;
 }
 
 h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-h1 {
-  font-weight: 900;
-}
 @media screen and (min-width: 117em) {
   h1 {
     font-size: 3.99758436em;
@@ -408,6 +459,7 @@ h1 {
 h3 {
   font-size: 1.999396em;
   line-height: 1.5em;
+  font-weight: 300;
   margin: 0.70721358em 0 0.25015107em;
 }
 
@@ -457,7 +509,7 @@ a:active, a:focus {
 }
 
 hr {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ECECEC;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -505,33 +557,6 @@ picture {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-ol > li {
-  background-color: #F4F5F7;
-  background-image: -webkit-linear-gradient( right , #FFF, #F4F5F7);
-  background-image: linear-gradient(to left, #FFF, #F4F5F7);
-  float: left;
-  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
-  position: relative;
-  -webkit-transition: all 0.8s;
-  -moz-transition: all 0.8s;
-  transition: all 0.8s;
-}
-ol > li::after {
-  content: " ";
-  height: 23px;
-  position: absolute;
-  top: 10px;
-  right: -13px;
-  bottom: 0;
-  left: 0;
-  -webkit-transform: rotate(45deg) skew(20deg, 30deg);
-  -moz-transform: rotate(45deg) skew(20deg, 30deg);
-  -ms-transform: rotate(45deg) skew(20deg, 30deg);
-  -o-transform: rotate(45deg) skew(20deg, 30deg);
-  transform: rotate(45deg) skew(20deg, 30deg);
-  width: 23px;
 }
 
 /*# sourceMappingURL=style.css.map */
