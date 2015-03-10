@@ -10,36 +10,30 @@
 }
 
 @mixin small {
-  /* 13px / 18px */
   font-size: modular-scale(0);
   @include line-height(0);
 }
 @mixin normal {
-  /* 16px / 24px */
   font-size: modular-scale(1);
   @include line-height(1);
 }
 
 @mixin large {
-  /* 26 / 36px */
   font-size: modular-scale(2);
   @include line-height(2);
 }
 
 @mixin huge {
-  /* 42px / 48px */
   font-size: modular-scale(3);
   @include line-height(3);
 }
 
 @mixin massive {
-  /* 68px / 72px */
   font-size: modular-scale(4);
   @include line-height(4);
 }
 
 @mixin gigantic {
-  /* 110px / 120px */
   font-size: modular-scale(5);
   @include line-height(5);
 }
@@ -83,9 +77,11 @@ h6 {
 }
 
 h1, h2 {
-  @include large;
+  @include huge;
+  line-height: 1.1em;
+  margin-top: 0.5em;
   margin-bottom: 0;
-  font-weight: $bold-font-weight;
+  font-weight: $light-font-weight;
 }
 
 h3,h4,h5,h6{
@@ -93,11 +89,12 @@ h3,h4,h5,h6{
 }
 
 h1{
-  @include media($massive-screen-up) {
+  @include media($huge-2-screen-up){
     @include massive;
   }
-  @include media($huge-2-screen-up){
-    @include huge;
+  
+  @include media($massive-screen-up) {
+    @include gigantic;
   }
 }
 
