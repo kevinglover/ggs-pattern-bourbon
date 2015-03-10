@@ -51,6 +51,7 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
   line-height: $base-line-height;
   
   @include media($medium-screen-up) {
@@ -74,18 +75,24 @@ h5,
 h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
   clear:both;
+  
 }
 
 h1, h2 {
   @include large;
+  margin-bottom: 0;
+  font-weight: $bold-font-weight;
+}
+
+h3,h4,h5,h6{
+  font-weight: $normal-font-weight;
 }
 
 h1{
-  margin-bottom: 0;
-
   @include media($massive-screen-up) {
     @include massive;
   }
@@ -95,9 +102,6 @@ h1{
 }
 
 h2 {
-  font-weight: normal;
-  margin-bottom: 0;
-  
   @include media($massive-screen-up) {
     @include huge;
   }

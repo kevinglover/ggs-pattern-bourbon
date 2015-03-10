@@ -5,11 +5,18 @@ $font-size: 16;
 $em: $font-size * 1;
 
 // Typography
-$base-font-family: $helvetica;
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+$base-font-family:'Lato', sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
 $base-font-size: $font-size / 16 * 1em;
+
+// Font Weights
+$light-font-weight:300;
+$normal-font-weight:400;
+$bold-font-weight:700;
+$base-font-weight:$normal-font-weight;
 
 // Line height
 $base-line-height-calc:#{$line / $font-size};
