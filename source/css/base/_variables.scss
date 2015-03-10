@@ -35,27 +35,12 @@ $small-spacing: #{number($base-line-height-calc) / 2}em;
 $base-z-index: 0;
 
 // Colors
-$blue: #477dca;
-$blue-grey: #607D8B !default;
-$brown: #795548 !default;
-$cyan: #00BCD4 !default;
-$dark-grey: #333;
-$deep-orange: #FF5722 !default;
-$deep-purple: #673AB7 !default;
-$grey: #9E9E9E !default;
-$indigo: #3F51B5 !default;
-$light-grey: #ECECEC !default;
-$light-blue: #03A9F4 !default;
-$light-green: #8BC34A !default;
-$light-yellow: #FFEB3B !default;
-$lime: #CDDC39 !default;
-$medium-grey: #999;
-$orange: #FF9800 !default;
-$pink: #E91E63 !default;
-$purple: #9C27B0 !default;
-$red: #F44336 !default;
-$teal: #009688 !default;
-$white: #FFF;
+@import "colors";
+
+// Neat Colors
+$light-grey: $grey-100;
+$medium-grey: $grey;
+$dark-grey: $grey-700;
 
 // Localization of grey/gray
 $gray: $grey;

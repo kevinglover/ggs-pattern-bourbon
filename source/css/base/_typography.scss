@@ -176,3 +176,8 @@ picture {
   margin: 0;
   max-width: 100%;
 }
+
+@include selection {
+  background-color: $amber;
+  color: $grey-900;
+}
