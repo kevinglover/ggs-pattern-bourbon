@@ -362,3 +362,29 @@ $blue-grey: $blue-grey-500;
 $black: #000000;
 $white: #ffffff;
 $inverse: $indigo;
+
+// General Font Colors
+$lightbg-text:$grey-700;
+$darkbg-text: $grey-100;
+$icon-color: rgba(0,0,0,0.5);
+
+// Status Element Shades
+$primary: $blue !default;
+$success: $light-green !default;
+$info: $light-blue !default;
+$warning: $deep-orange !default;
+$danger: $red !default;
+
+// Button Colors
+$btn-default: #FFF;
+$btn-default-text: $lightbg-text;
+$btn-primary: $primary;
+$btn-primary-text: $darkbg-text;
+$btn-success: $success;
+$btn-success-text: $darkbg-text;
+$btn-info: $info;
+$btn-info-text: $darkbg-text;
+$btn-warning: $warning;
+$btn-warning-text: $darkbg-text;
+$btn-danger: $danger;
+$btn-danger-text: $darkbg-text;

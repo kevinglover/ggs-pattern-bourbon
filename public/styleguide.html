@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Scaffold styles, variables and structure for Bourbon projects.">
   <title>Bitters - Example</title>
-  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="css/material/ripples.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/material-icons.css"/>
   <!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -117,29 +120,43 @@
                   </optgroup>
                 </select></p>
                 
-                <p><label for="radio_buttons">Radio Buttons:</label>
-                  <label>
-                    <input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1
-                  </label>
-                  <label>
-                    <input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2
-                  </label>
-                  <label>
-                    <input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3
-                  </label>
-                </p>
+                <h4><label for="radio_buttons">Radio Buttons:</label></h4>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3
+                    </label>
+                  </div>
                 
-                <p><label for="checkboxes">Checkboxes:</label>
-                  <label>
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Checkbox 1
-                  </label>
-                  <label>
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Checkbox 2
-                  </label>
-                  <label>
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Checkbox 3
-                  </label>
-                </p>
+                <h4><label for="checkboxes">Checkboxes:</label></h4>
+                
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="checkboxes" value="check_1"> Checkbox
+                    </label>
+                </div>
+                
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="checkboxes" value="check_2"> Checkbox
+                    </label>
+                </div>
+                
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="checkboxes" value="check_3"> Checkbox
+                    </label>
+                </div>
+                <br/>
                 
                 <p><label for="password">Password:</label>
                   <input type="password" class="password" name="password" />
@@ -172,6 +189,29 @@
                 <td>Division 1</td><td>Division 2</td><td>Division 3</td>
               </tr>
             </table>
+            
+            <hr>
+            
+            <h2 id="buttons">Buttons</h2>
+            
+            <h3>Default Buttons</h3>
+            <a href="javascript:void(0)" class="btn btn-default">Default</a>
+            <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
+            <a href="javascript:void(0)" class="btn btn-success">Success</a>
+            <a href="javascript:void(0)" class="btn btn-info">Info</a>
+            <a href="javascript:void(0)" class="btn btn-warning">Warning</a>
+            <a href="javascript:void(0)" class="btn btn-danger">Danger</a>
+            <a href="javascript:void(0)" class="btn btn-link">Link</a>
+            
+            <h3>Flat Buttons</h3>
+            <a href="javascript:void(0)" class="btn btn-flat btn-default">Default</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-primary">Primary</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-success">Success</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-info">Info</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-warning">Warning</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-danger">Danger</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-link">Link</a>
+            
           </div>
           
         </section>
@@ -186,7 +226,11 @@
             </nav>
           </div>
         </footer>
+  <script src="js/jquery.min.js"></script>
   <script src="js/ggs-gridlet.js"></script>
+  <script src="js/material/material.min.js"></script>
+  <script src="js/material/ripples.min.js"></script>
+  <script src="js/site.js"></script>
 
 </body>
 </html>
