@@ -17,6 +17,43 @@ ol {
   }
 }
 
+// Custom Order Lists
+.circle-counter {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  
+  li {
+    counter-increment: step-counter;
+    margin-bottom: 10px;
+    
+    &:before {
+      content: counter(step-counter);
+      background-color: transparent;
+      border-radius: 50%;
+      color: $base-font-color;
+      border: 1px solid $base-font-color;
+      font-size: 70%;
+      margin-right: 8px;
+      padding: 2px 5px;
+      height: 34px;
+      width: 34px;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+  
+  &.fill{
+    li{
+      &:before{
+        color: $white;
+        border: 1px solid $base-font-color;
+        background-color: $base-font-color;
+      }
+    }
+  }
+}
+
 dl {
   margin-bottom: $small-spacing;
 
