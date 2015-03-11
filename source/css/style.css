@@ -215,9 +215,11 @@ button:disabled {
 
 .btn {
   position: relative;
-  padding: 8px 30px;
+  padding: 0.5em 1em;
+  font-size: 90%;
   border: 0;
   margin: 10px 1px;
+  display: inline-block;
   cursor: pointer;
   border-radius: 4px;
   text-transform: uppercase;
@@ -226,14 +228,14 @@ button:disabled {
   transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none !important;
 }
-.btn:hover {
+.btn:hover, .btn:focus {
   color: #f5f5f5;
 }
 
 .btn-link, .btn:not([class^="btn btn-"]), .btn-default {
   color: #616161;
 }
-.btn-link:hover, .btn:not([class^="btn btn-"]):hover, .btn-default:hover {
+.btn-link:hover, .btn-link:focus, .btn:not([class^="btn btn-"]):hover, .btn:not([class^="btn btn-"]):focus, .btn-default:hover, .btn-default:focus {
   color: #616161;
 }
 
@@ -499,10 +501,12 @@ select {
 }
 .checkbox label input[type=checkbox]:not(:checked) ~ .ripple {
   -webkit-animation: rippleOff 500ms;
+  -moz-animation: rippleOff 500ms;
   animation: rippleOff 500ms;
 }
 .checkbox label input[type=checkbox]:checked ~ .ripple {
   -webkit-animation: rippleOn 500ms;
+  -moz-animation: rippleOn 500ms;
   animation: rippleOn 500ms;
 }
 .checkbox label span {
@@ -515,7 +519,7 @@ select {
   display: block;
   position: absolute;
   content: "";
-  background-color: rgba(0, 0, 0, 0.84);
+  background-color: #82c4f8;
   left: -4px;
   top: -11px;
   height: 50px;
@@ -555,7 +559,9 @@ select {
   position: absolute;
   content: "";
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(45deg);
   display: block;
   margin-top: -4px;
@@ -564,6 +570,7 @@ select {
   height: 0;
   box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0px 0px 0 0px inset;
   -webkit-animation: checkbox-off 0.3s linear forwards;
+  -moz-animation: checkbox-off 0.3s linear forwards;
   animation: checkbox-off 0.3s linear forwards;
 }
 .checkbox input[type=checkbox] {
@@ -576,7 +583,9 @@ select {
 .checkbox input[type=checkbox] [disabled] ~ .check:after {
   background-color: rgba(0, 0, 0, 0.84);
   -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .checkbox input[type=checkbox]:focus ~ .check:after {
@@ -585,23 +594,32 @@ select {
 .checkbox input[type=checkbox]:checked ~ .check:before {
   box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
   -webkit-animation: checkbox-on 0.3s linear forwards;
+  -moz-animation: checkbox-on 0.3s linear forwards;
   animation: checkbox-on 0.3s linear forwards;
 }
 .checkbox input[type=checkbox]:checked ~ .check:after {
   -webkit-animation: rippleOn 500ms linear forwards;
+  -moz-animation: rippleOn 500ms linear forwards;
   animation: rippleOn 500ms linear forwards;
 }
 .checkbox input[type=checkbox]:not(:checked) ~ .check:after {
   -webkit-animation: rippleOff 500ms linear forwards;
+  -moz-animation: rippleOff 500ms linear forwards;
   animation: rippleOff 500ms linear forwards;
 }
 .checkbox input[type=checkbox]:not(:checked) ~ .check:after {
+  -webkit-animation: rippleOff 500ms linear forwards;
+  -moz-animation: rippleOff 500ms linear forwards;
   animation: rippleOff 500ms linear forwards;
 }
 .checkbox input[type=checkbox]:checked ~ .check:after {
+  -webkit-animation: rippleOn 500ms linear forwards;
+  -moz-animation: rippleOn 500ms linear forwards;
   animation: rippleOn 500ms linear forwards;
 }
 .checkbox:not(:hover) input[type=checkbox] ~ .check:before, .checkbox:not(:hover) input[type=checkbox] ~ .check:after {
+  -webkit-animation-duration: 1ms;
+  -moz-animation-duration: 1ms;
   animation-duration: 1ms;
 }
 .checkbox input[type=checkbox][disabled]:not(:checked) ~ .check:before,
@@ -610,16 +628,20 @@ select {
 }
 .checkbox input[type=checkbox][disabled] ~ .check:after {
   background-color: #616161;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+.checkbox input[type=checkbox]:checked ~ .check {
+  color: #2196f3;
+}
 .checkbox input[type=checkbox]:checked ~ .check:after {
-  background-color: #8bc34a;
+  background-color: #2196f3;
 }
 .checkbox input[type=checkbox]:checked ~ .check:before {
-  color: #4caf50;
-}
-.checkbox input[type=checkbox]:checked ~ .check {
-  color: #4caf50;
+  color: #2196f3;
 }
 
 @-webkit-keyframes checkbox-on {
@@ -653,6 +675,9 @@ select {
   }
   50% {
     -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
     transform: rotate(45deg);
     margin-top: -4px;
     margin-left: 6px;
@@ -662,6 +687,9 @@ select {
   }
   51% {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg);
     margin-top: -2px;
     margin-left: -2px;
@@ -671,6 +699,9 @@ select {
   }
   100% {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg);
     margin-top: -2px;
     margin-left: -2px;
@@ -688,6 +719,9 @@ select {
   }
   50% {
     -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
     transform: rotate(45deg);
     margin-top: -4px;
     margin-left: 6px;
@@ -697,6 +731,9 @@ select {
   }
   51% {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg);
     margin-top: -2px;
     margin-left: -2px;
@@ -706,6 +743,9 @@ select {
   }
   100% {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg);
     margin-top: -2px;
     margin-left: -2px;
@@ -787,9 +827,9 @@ select {
   display: block;
   position: absolute;
   content: "";
-  background-color: #616161;
-  left: -18px;
-  top: -18px;
+  background-color: #82c4f8;
+  left: -16px;
+  top: -16px;
   height: 50px;
   width: 50px;
   border-radius: 100%;
@@ -799,9 +839,16 @@ select {
   transform: scale(1.5);
 }
 .radio label input[type=radio]:not(:checked) ~ .check:after {
+  -webkit-animation: rippleOff 500ms;
+  -moz-animation: rippleOff 500ms;
   animation: rippleOff 500ms;
 }
+.radio label input[type=radio]:checked ~ .circle {
+  border-color: #2196f3;
+}
 .radio label input[type=radio]:checked ~ .check:after {
+  -webkit-animation: rippleOn 500ms;
+  -moz-animation: rippleOn 500ms;
   animation: rippleOn 500ms;
 }
 .radio input[type=radio][disabled] ~ .check,
@@ -819,6 +866,19 @@ select {
 }
 .radio input[type=radio][disabled] ~ .check {
   background-color: #616161;
+}
+.radio:not(:hover) input[type=checkbox] ~ .check:before, .radio:not(:hover) input[type=checkbox] ~ .check:after {
+  animation-duration: 1ms;
+}
+.radio input[type=checkbox]:not(:checked) ~ .check:after {
+  -webkit-animation: rippleOff 500ms linear forwards;
+  -moz-animation: rippleOff 500ms linear forwards;
+  animation: rippleOff 500ms linear forwards;
+}
+.radio input[type=checkbox]:checked ~ .check:after {
+  -webkit-animation: rippleOn 500ms linear forwards;
+  -moz-animation: rippleOn 500ms linear forwards;
+  animation: rippleOn 500ms linear forwards;
 }
 
 @keyframes rippleOn {
@@ -858,6 +918,35 @@ ol.default {
   list-style-type: decimal;
   margin-bottom: 0.75em;
   padding-left: 1.5em;
+}
+
+.circle-counter {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.circle-counter li {
+  counter-increment: step-counter;
+  margin-bottom: 10px;
+}
+.circle-counter li:before {
+  content: counter(step-counter);
+  background-color: transparent;
+  border-radius: 50%;
+  color: #616161;
+  border: 1px solid #616161;
+  font-size: 70%;
+  margin-right: 8px;
+  padding: 2px 5px;
+  height: 34px;
+  width: 34px;
+  display: inline-block;
+  text-align: center;
+}
+.circle-counter.fill li:before {
+  color: #ffffff;
+  border: 1px solid #616161;
+  background-color: #616161;
 }
 
 dl {
@@ -1088,12 +1177,33 @@ picture {
   }
 }
 
-.wrapper {
+.wrapper, #content .full {
   padding: 0 0.75em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+#content .half {
+  padding: 0 0.75em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 45em) {
+  #content .half {
+    width: 50%;
+    float: left;
+  }
+}
+
+footer.main {
+  margin-top: 1.5em;
+  padding: 1.5em 0;
+  background-color: #424242;
+  color: #f5f5f5;
 }
 
 /*# sourceMappingURL=style.css.map */

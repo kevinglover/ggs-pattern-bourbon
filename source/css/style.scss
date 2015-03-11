@@ -7,8 +7,16 @@
   @include container;
 }
 
-.wrapper{
+.wrapper, #content .full{
   @include wrapper; 
+}
+
+#content .half{
+  @include wrapper;
+  @include media($medium-2-screen-up){
+    width:50%;
+    float:left;
+  }
 }
 
 ul.default {
@@ -17,4 +25,11 @@ ul.default {
 
 ol.default {
   @extend %default-ol;
+}
+
+footer.main{
+  margin-top:1.5em;
+  padding:1.5em 0;
+  background-color:$grey-800;
+  color:$grey-100;
 }
