@@ -33,9 +33,9 @@ $radio-size: 20px;
             display: block;
             position: absolute;
             content: "";
-            background-color: $lightbg-text;
-            left: -18px;
-            top: -18px;
+            background-color: lighten($radio-default,20%);
+            left: -16px;
+            top: -16px;
             height: 50px;
             width: 50px;
             border-radius: 100%;
@@ -45,10 +45,17 @@ $radio-size: 20px;
             transform: scale(1.5);
         }
         input[type=radio]:not(:checked) ~ .check:after {
-            animation: rippleOff 500ms;
+          @include animation(rippleOff 500ms);
         }
-        input[type=radio]:checked ~ .check:after {
-            animation: rippleOn 500ms;
+        input[type=radio]:checked {
+          &~ .circle{
+            border-color: $radio-default;
+          }
+          &~ .check{
+            &:after {
+              @include animation(rippleOn 500ms);
+            }
+          }
         }
 
     }
@@ -68,7 +75,21 @@ $radio-size: 20px;
     input[type=radio][disabled] ~ .check {
         background-color: $lightbg-text;
     }
-
+    
+    // Make animate quickly when not hover
+    &:not(:hover) input[type=checkbox] ~ .check {
+        &:before, &:after {
+            animation-duration: 1ms;
+        }
+    }
+    
+    // Ripple effect on click
+    input[type=checkbox]:not(:checked) ~ .check:after {
+      @include animation( rippleOff 500ms linear forwards);
+    }
+    input[type=checkbox]:checked ~ .check:after {
+      @include animation(rippleOn 500ms linear forwards);
+    }
 }
 
 @keyframes rippleOn {
