@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Scaffold styles, variables and structure for Bourbon projects.">
   <title>Bitters - Example</title>
-  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="css/material/ripples.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/material-icons.css"/>
   <!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -23,14 +26,14 @@
   </header>
 
   <section id="content">
-    <div class="wrapper">
+    <div class="full">
       <h1 id="main">Bitters example page</h1>
       
       <p>The purpose of this HTML is to help determine what default settings are with Bitters and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
       
       <hr>
       
-      <h1 id="headings">Headings</h1>
+      <h2 id="headings">Headings</h2>
       
       <h1>h1. Heading</h1>
       <h2>h2. Heading</h2>
@@ -40,30 +43,45 @@
       <h6>h6. Heading</h6>
       
       <hr>
-      
-      <h1 id="paragraph">Paragraph</h1>
+    </div>
+    
+    <div class="full">
+      <h2 id="paragraph">Paragraph</h2>
       
       <p>Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
       
       <p>Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
       
       <hr>
-      
-      <h1 id="list_types">List Types</h1>
+    </div>
+    
+    <div class="full">
+      <h2 id="list_types">List Types</h2>
       
       <h3>Definition List</h3>
       <dl>
         <dt>Definition List Title</dt>
         <dd>This is a definition list division.</dd>
       </dl>
-      
       <h3>Ordered List</h3>
-      <ol>
+    </div>
+    
+    <div class="half">
+      <ol class="circle-counter">
         <li>List Item 1</li>
         <li>List Item 2</li>
         <li>List Item 3</li>
       </ol>
-      
+    </div>
+    <div class="half">
+      <ol class="circle-counter fill">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+      </ol>
+    </div>
+    
+    <div class="full">
       <h3>Unordered List</h3>
       <ul>
         <li>List Item 1</li>
@@ -86,14 +104,16 @@
       </ul>
       
       <hr>
-      
-      <h1 id="form_elements">Fieldsets and Form Elements</h1>
+    </div>
+    
+    <div class="full">
+      <h2 id="form_elements">Fieldsets and Form Elements</h2>
       
       <fieldset>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
         
         <form>
-          <h2>Form Element</h2>
+          <h3>Form Element</h3>
           
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.</p>
           
@@ -117,29 +137,43 @@
                   </optgroup>
                 </select></p>
                 
-                <p><label for="radio_buttons">Radio Buttons:</label>
-                  <label>
-                    <input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1
-                  </label>
-                  <label>
-                    <input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2
-                  </label>
-                  <label>
-                    <input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3
-                  </label>
-                </p>
+                <h4><label for="radio_buttons">Radio Buttons:</label></h4>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" class="radio" name="radio_button" value="radio_1" checked=checked /> Radio 1
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3
+                    </label>
+                  </div>
                 
-                <p><label for="checkboxes">Checkboxes:</label>
-                  <label>
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Checkbox 1
-                  </label>
-                  <label>
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Checkbox 2
-                  </label>
-                  <label>
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Checkbox 3
-                  </label>
-                </p>
+                <h4><label for="checkboxes">Checkboxes:</label></h4>
+                
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="checkboxes" value="check_1"> Checkbox
+                    </label>
+                </div>
+                
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="checkboxes" value="check_2"> Checkbox
+                    </label>
+                </div>
+                
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="checkboxes" value="check_3"> Checkbox
+                    </label>
+                </div>
+                <br/>
                 
                 <p><label for="password">Password:</label>
                   <input type="password" class="password" name="password" />
@@ -155,8 +189,10 @@
             </fieldset>
             
             <hr>
-            
-            <h1 id="tables">Tables</h1>
+          </div>
+          
+          <div class="full">
+            <h2 id="tables">Tables</h2>
             
             <table cellspacing="0" cellpadding="0">
               <tr>
@@ -172,19 +208,50 @@
                 <td>Division 1</td><td>Division 2</td><td>Division 3</td>
               </tr>
             </table>
+            
+            <hr>
+          </div>
+          
+          <div class="full">
+            <h2 id="buttons">Buttons</h2>
+            
+            <h3>Default Buttons</h3>
+            <a href="javascript:void(0)" class="btn btn-default">Default</a>
+            <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
+            <a href="javascript:void(0)" class="btn btn-success">Success</a>
+            <a href="javascript:void(0)" class="btn btn-info">Info</a>
+            <a href="javascript:void(0)" class="btn btn-warning">Warning</a>
+            <a href="javascript:void(0)" class="btn btn-danger">Danger</a>
+            <a href="javascript:void(0)" class="btn btn-link">Link</a>
+            
+            <h3>Flat Buttons</h3>
+            <a href="javascript:void(0)" class="btn btn-flat btn-default">Default</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-primary">Primary</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-success">Success</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-info">Info</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-warning">Warning</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-danger">Danger</a>
+            <a href="javascript:void(0)" class="btn btn-flat btn-link">Link</a>
+            
           </div>
           
         </section>
         
         <footer class="main">
-          <p>Bourbon is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>. Tweet your questions or suggestions to <a href="//twitter.com/bourbonsass">@bourbonsass</a> and while you’re at it follow us too.</p>
-          <p>Copyright &copy; 2013&ndash;2015 <a href="//thoughtbot.com">thoughtbot, inc</a>. Bourbon is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/bourbon/blob/master/LICENSE.md">license</a>.</p>
-          <nav class="actions">
-            <a href="/example.html">Example</a>
-            <a href="//github.com/thoughtbot/bitters">GitHub</a>
-          </nav>
+          <div class="inner">
+            <p>Bourbon is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>. Tweet your questions or suggestions to <a href="//twitter.com/bourbonsass">@bourbonsass</a> and while you’re at it follow us too.</p>
+            <p>Copyright &copy; 2013&ndash;2015 <a href="//thoughtbot.com">thoughtbot, inc</a>. Bourbon is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/bourbon/blob/master/LICENSE.md">license</a>.</p>
+            <nav class="actions">
+              <a href="/example.html">Example</a>
+              <a href="//github.com/thoughtbot/bitters">GitHub</a>
+            </nav>
+          </div>
         </footer>
+  <script src="js/jquery.min.js"></script>
   <script src="js/ggs-gridlet.js"></script>
+  <script src="js/material/material.min.js"></script>
+  <script src="js/material/ripples.min.js"></script>
+  <script src="js/site.js"></script>
 
 </body>
 </html>
