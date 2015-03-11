@@ -13,12 +13,10 @@ $checkbox-default: $blue;
       position: relative;
       
       input[type=checkbox]:not(:checked) ~ .ripple {
-        -webkit-animation: rippleOff 500ms;
-                animation: rippleOff 500ms;
+        @include animation(rippleOff 500ms);
       }
       input[type=checkbox]:checked ~ .ripple {
-        -webkit-animation: rippleOn 500ms;
-                animation: rippleOn 500ms;
+        @include animation(rippleOn 500ms);
       }
 
       span {
@@ -31,7 +29,7 @@ $checkbox-default: $blue;
         display: block;
         position: absolute;
         content: "";
-        background-color: rgba(0, 0, 0, 0.84);
+        background-color: lighten($checkbox-default, 20%);
         left: -4px;
         top: -11px;
         height: 50px;
@@ -53,6 +51,7 @@ $checkbox-default: $blue;
           top: 5px;
           left: -3px;
           margin-right: 6px;
+          
         &:after {
           display: block;
           position: absolute;
@@ -70,9 +69,7 @@ $checkbox-default: $blue;
         &:before {
           position: absolute;
           content: "";
-          -webkit-transform: rotate(45deg);
-              -ms-transform: rotate(45deg);
-                  transform: rotate(45deg);
+          @include transform(rotate(45deg));
           display: block;
           margin-top: -4px;
           margin-left: 6px;
@@ -85,8 +82,7 @@ $checkbox-default: $blue;
                         0 0 0 0,
                         0 0 0 0,
                         0px 0px 0 0px inset;
-          -webkit-animation: checkbox-off 0.3s linear forwards;
-                  animation: checkbox-off 0.3s linear forwards;
+          @include animation(checkbox-off 0.3s linear forwards);
         }
       }
     }
@@ -100,9 +96,7 @@ $checkbox-default: $blue;
       }
       [disabled] ~ .check:after {
         background-color: rgba(0, 0, 0, 0.84);
-        -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-                transform: rotate(-45deg);
+        @include transform(rotate(-45deg));
       }
       
       &:focus{
@@ -116,20 +110,17 @@ $checkbox-default: $blue;
         &~ .check{
           &:before{
             box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
-            -webkit-animation: checkbox-on 0.3s linear forwards;
-                    animation: checkbox-on 0.3s linear forwards;
+            @include animation(checkbox-on 0.3s linear forwards);
           }
           &:after{
-            -webkit-animation: rippleOn 500ms linear forwards;
-                    animation: rippleOn 500ms linear forwards;
+            @include animation(rippleOn 500ms linear forwards);
           }
         }
       }
       &:not(:checked){
         &~ .check{
           &:after{
-            -webkit-animation: rippleOff 500ms linear forwards;
-                    animation: rippleOff 500ms linear forwards;
+            @include animation(rippleOff 500ms linear forwards);
           }
         }
       }
@@ -138,16 +129,16 @@ $checkbox-default: $blue;
     
     // Ripple effect on click
     input[type=checkbox]:not(:checked) ~ .check:after {
-        animation: rippleOff 500ms linear forwards;
+      @include animation(rippleOff 500ms linear forwards);
     }
     input[type=checkbox]:checked ~ .check:after {
-        animation: rippleOn 500ms linear forwards;
+      @include animation(rippleOn 500ms linear forwards);
     }
 
     // Make animate quickly when not hover
     &:not(:hover) input[type=checkbox] ~ .check {
         &:before, &:after {
-            animation-duration: 1ms;
+          @include animation-duration(1ms);
         }
     }
 
@@ -158,12 +149,15 @@ $checkbox-default: $blue;
     }
     input[type=checkbox][disabled] ~ .check:after {
         background-color: $lightbg-text;
-        transform: rotate(-45deg);
+        @include transform(rotate(-45deg));
     }
 
-    input[type=checkbox]:checked ~ .check:after{ background-color: $success; }
-    input[type=checkbox]:checked ~ .check:before{ color: #4caf50;}
-    input[type=checkbox]:checked ~ .check{ color: #4caf50;}
+    input[type=checkbox]:checked ~ .check{ 
+      color: $checkbox-default;
+      
+      &:after{ background-color: $checkbox-default; }
+      &:before{ color: $checkbox-default; }
+    }
 }
 
 
@@ -197,8 +191,7 @@ $checkbox-default: $blue;
     box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
   }
   50% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    @include transform(rotate(45deg));
     margin-top: -4px;
     margin-left: 6px;
     width: 0px;
@@ -206,8 +199,7 @@ $checkbox-default: $blue;
     box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
   }
   51% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    @include transform(rotate(0deg));
     margin-top: -2px;
     margin-left: -2px;
     width: 20px;
@@ -221,8 +213,7 @@ $checkbox-default: $blue;
             0px 0px 0 10px inset;
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    @include transform(rotate(0deg));
     margin-top: -2px;
     margin-left: -2px;
     width: 20px;
@@ -244,8 +235,7 @@ $checkbox-default: $blue;
     box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
   }
   50% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    @include transform(rotate(45deg));
     margin-top: -4px;
     margin-left: 6px;
     width: 0px;
@@ -253,8 +243,7 @@ $checkbox-default: $blue;
     box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
   }
   51% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    @include transform(rotate(0deg));
     margin-top: -2px;
     margin-left: -2px;
     width: 20px;
@@ -268,8 +257,7 @@ $checkbox-default: $blue;
             0px 0px 0 10px inset;
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    @include transform(rotate(0deg));
     margin-top: -2px;
     margin-left: -2px;
     width: 20px;
