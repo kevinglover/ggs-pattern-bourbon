@@ -49,17 +49,18 @@ button {
 
 .btn {
     position: relative;
-    padding: 8px 30px;
+    padding: 0.5em 1em;
+    font-size:90%;
     border: 0;
     margin: 10px 1px;
-
+    display:inline-block;
     cursor: pointer;
     border-radius: 4px;
     text-transform: uppercase;
     text-decoration: none;
     color: $darkbg-text;
 
-    &:hover {
+    &:hover, &:focus {
         color: $darkbg-text;
     }
     &:hover:not(.btn-link) {
@@ -74,7 +75,7 @@ button {
 // This is needed to style buttons which has not a variation suffix (they must stiled as btn-default)
 .btn-link, .btn:not([class^="btn btn-"]), .btn-default {
     color: $lightbg-text;
-    &:hover {
+    &:hover, &:focus {
         color: $lightbg-text;
     }
 }
