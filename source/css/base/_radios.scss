@@ -17,12 +17,14 @@ $radio-size: 20px;
             top: 4px;
             transition-duration: 0.2s;
         }
+        
         .circle {
             border: 2px solid $lightbg-text;
             height: $radio-size;
             width: $radio-size;
             border-radius: 100%;
         }
+        
         .check {
             height: $radio-size;
             width: $radio-size;
@@ -46,9 +48,11 @@ $radio-size: 20px;
               transform: scale(1.5);
           }
         }
+        
         input[type=radio]:not(:checked) ~ .check:after {
           @include animation(rippleOff 500ms);
         }
+        
         input[type=radio]:checked {
           &~ .circle{
             border-color: $radio-default;
