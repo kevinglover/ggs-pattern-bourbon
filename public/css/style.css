@@ -903,6 +903,69 @@ select {
     opacity: 0;
   }
 }
+.togglebutton {
+  vertical-align: middle;
+}
+.togglebutton, .togglebutton label, .togglebutton input, .togglebutton .toggle {
+  user-select: none;
+}
+.togglebutton label {
+  font-weight: 400;
+  cursor: pointer;
+}
+.togglebutton label input[type=checkbox]:first-of-type {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.togglebutton label .toggle,
+.togglebutton label input[type=checkbox][disabled]:first-of-type + .toggle {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  background-color: #9e9e9e;
+  border-radius: 15px;
+  margin-right: 10px;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  vertical-align: middle;
+}
+.togglebutton label .toggle:after,
+.togglebutton label input[type=checkbox][disabled]:first-of-type + .toggle:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+  left: -5px;
+  top: -2px;
+  -webkit-transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+  -moz-transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+  transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+}
+.togglebutton label input[type=checkbox]:first-of-type:checked + .toggle {
+  background-color: #82c4f8;
+}
+.togglebutton label input[type=checkbox]:first-of-type:checked + .toggle:after {
+  background-color: #2196f3;
+}
+.togglebutton label input[type=checkbox][disabled]:first-of-type + .toggle:after,
+.togglebutton label input[type=checkbox][disabled]:checked:first-of-type + .toggle:after {
+  background-color: #eeeeee;
+}
+.togglebutton label input[type=checkbox]:first-of-type ~ .toggle:active:after,
+.togglebutton label input[type=checkbox][disabled]:first-of-type ~ .toggle:active:after {
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(33, 150, 243, 0.2);
+}
+.togglebutton label input[type=checkbox]:first-of-type:checked + .toggle:after {
+  left: 15px;
+}
+
 ul,
 ol {
   list-style-type: none;
