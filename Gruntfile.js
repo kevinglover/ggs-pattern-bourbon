@@ -22,7 +22,9 @@ module.exports = function(grunt) {
         { expand: true, cwd: './source/_data/', src: 'annotations.js', dest: './public/data/' },
         { expand: true, cwd: './bower_components/jquery/dist/', src: '*', dest: './public/js/'},
         { expand: true, cwd: './bower_components/bootstrap-material-design/dist/js/', src: '*', dest: './public/js/material/'},
-        { expand: true, cwd: './bower_components/bootstrap-material-design/dist/css/', src: '*', dest: './public/css/material/'}
+        { expand: true, cwd: './bower_components/bootstrap-material-design/dist/css/', src: '*', dest: './public/css/material/'},
+        { expand: true, cwd: './bower_components/selectize/dist/js/standalone/', src: '*.min.js', dest: './public/js/selectize/'},
+        { expand: true, cwd: './bower_components/selectize/dist/css/', src: '*', dest: './public/css/selectize/'}
         
         ]
       }
