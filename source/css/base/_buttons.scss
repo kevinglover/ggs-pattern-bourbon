@@ -45,6 +45,42 @@ button {
 
 @mixin button-variant($color) {
     background-color: $color;
+    
+    // Flat Buttons
+    &.btn-flat{
+      @extend .shadow-z-0;
+      background-color:transparent;
+      @include transition(background-color, 0.2s);
+      border-color: $color;
+      color: $color;
+      &:hover, &:focus{
+        background-color: lighten($color, 20%);
+        background-color: color-opacity($color, 0.2);
+      }
+    }
+    
+    // Floating Action Button (FAB)
+    &.btn-fab {
+        @extend .shadow-z-2;
+        margin: 0;
+        padding: 15px;
+        font-size: 26px;
+        width: 56px;
+        height: 56px;
+        
+        &, &:hover {
+            //.variations(#{""}, background-color, transparent);
+        }
+        &, .ripple-wrapper {
+            border-radius: 100%;
+        }
+        &.btn-mini {
+            width: 40px;
+            height: 40px;
+            padding: 13px;
+            font-size: 15px;
+        }
+    }
 }
 
 .btn {
@@ -118,33 +154,15 @@ button {
     box-shadow: none !important;
 }
 
-// Floating Action Button (FAB)
-
-.btn-fab {
-    margin: 0;
-    padding: 15px;
-    font-size: 26px;
-    width: 56px;
-    height: 56px;
-    &, &:hover {
-        //.variations(#{""}, background-color, transparent);
-    }
-    &, .ripple-wrapper {
-        border-radius: 100%;
-    }
-    &.btn-mini {
-        width: 40px;
-        height: 40px;
-        padding: 13px;
-        font-size: 15px;
-    }
-}
 
 // Alert buttons
 // --------------------------------------------------
 
 .btn-default {
   @include button-variant($btn-default);
+  &.btn-flat{
+    color:$base-font-color;
+  }
 }
 .btn-primary {
   @include button-variant($primary);
