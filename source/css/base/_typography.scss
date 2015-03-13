@@ -132,12 +132,11 @@ p {
   margin: 0 0 $small-spacing;
 }
 
-header{
-  h1, h2{
-    +p{
-      font-size:120%;
-    }
-  }
+@mixin lead{
+    font-size:120%;
+    border-bottom: #{(1 / 16)}em dotted $grey-600;
+    margin: 0 0 modular-scale(-1);
+    padding: modular-scale(-1) 0 modular-scale(-2);
 }
 
 article{

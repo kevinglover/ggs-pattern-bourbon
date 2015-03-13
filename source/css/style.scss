@@ -19,6 +19,26 @@
   }
 }
 
+h1 a{ 
+  
+  img{
+    height: 1em;
+    display: inline-block;
+    opacity: 0.8;
+    padding-top: 12px;
+  }
+  
+  &:hover{
+    img{
+      opacity: 1;
+    }
+  }
+}
+
+p.lead{
+  @include lead;
+}
+
 ul.default {
   @extend %default-ul;
 }

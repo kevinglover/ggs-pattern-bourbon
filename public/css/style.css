@@ -1164,10 +1164,6 @@ p {
   margin: 0 0 0.75em;
 }
 
-header h1 + p, header h2 + p {
-  font-size: 120%;
-}
-
 article p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -1260,6 +1256,23 @@ picture {
     width: 50%;
     float: left;
   }
+}
+
+h1 a img {
+  height: 1em;
+  display: inline-block;
+  opacity: 0.8;
+  padding-top: 12px;
+}
+h1 a:hover img {
+  opacity: 1;
+}
+
+p.lead {
+  font-size: 120%;
+  border-bottom: 0.0625em dotted #757575;
+  margin: 0 0 0.70721358em;
+  padding: 0.70721358em 0 0.50015105em;
 }
 
 footer.main {
