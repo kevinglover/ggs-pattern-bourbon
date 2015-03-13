@@ -39,13 +39,24 @@ p.lead{
   @include lead;
 }
 
-ul.default {
-  @extend %default-ul;
+#content{
+  ul.default {
+    @extend %default-ul;
+  }
+
+  ol.default {
+    @extend %default-ol;
+  }
+  
+  ol.circle {
+    @extend %circle-ol;
+  }
+  
+  ul.circle {
+    @extend %circle-ul;
+  }
 }
 
-ol.default {
-  @extend %default-ol;
-}
 
 footer.main{
   margin-top:1.5em;

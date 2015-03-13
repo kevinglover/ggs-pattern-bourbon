@@ -972,27 +972,26 @@ ol {
   margin: 0;
   padding: 0;
 }
-ul.default {
+#content ul.default {
   list-style-type: disc;
   margin-bottom: 0.75em;
   padding-left: 1.5em;
 }
-ol.default {
+#content ol.default {
   list-style-type: decimal;
   margin-bottom: 0.75em;
   padding-left: 1.5em;
 }
-
-.circle-counter {
+#content ol.circle {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.circle-counter li {
+#content ol.circle li {
   counter-increment: step-counter;
   margin-bottom: 10px;
 }
-.circle-counter li:before {
+#content ol.circle li:before {
   content: counter(step-counter);
   background-color: transparent;
   border-radius: 50%;
@@ -1006,7 +1005,34 @@ ol.default {
   display: inline-block;
   text-align: center;
 }
-.circle-counter.fill li:before {
+#content ol.fill.circle li:before {
+  color: #ffffff;
+  border: 1px solid #616161;
+  background-color: #616161;
+}
+#content ul.circle {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#content ul.circle li {
+  margin-bottom: 10px;
+}
+#content ul.circle li:before {
+  content: '';
+  background-color: transparent;
+  border-radius: 50%;
+  color: #616161;
+  border: 1px solid #616161;
+  font-size: 70%;
+  margin-right: 8px;
+  padding: 4px;
+  height: 0.5em;
+  width: 0.5em;
+  display: inline-block;
+  text-align: center;
+}
+#content ul.fill.circle li:before {
   color: #ffffff;
   border: 1px solid #616161;
   background-color: #616161;
