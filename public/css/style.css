@@ -2269,8 +2269,8 @@ picture {
 
 header.peakaboo {
   background: #009688;
-  height: 256px;
-  padding: 115px 0 0;
+  height: 15em;
+  padding: 8em 0 0;
 }
 header.peakaboo .wrapper {
   margin: 0 5.55555556%;
