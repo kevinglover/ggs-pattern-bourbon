@@ -7,11 +7,15 @@
   @include container;
 }
 
-.wrapper, #content .full{
+#masthead h1{
+  @include site-title;
+}
+
+.wrapper, #content > .full{
   @include wrapper; 
 }
 
-#content .half{
+#content > .half{
   @include wrapper;
   @include media($medium-2-screen-up){
     width:50%;

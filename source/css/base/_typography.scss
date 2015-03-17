@@ -77,6 +77,10 @@ h6 {
   width:100%;
 }
 
+@mixin site-title{
+  margin-top: 0.333em;
+}
+
 h1, h2 {
   @include huge;
   line-height: 1.1em;

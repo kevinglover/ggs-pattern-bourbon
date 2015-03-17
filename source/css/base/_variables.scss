@@ -5,7 +5,7 @@ $font-size: 16;
 $em: $font-size * 1;
 
 // Typography
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic);
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,400italic);
 $base-font-family:'Fira Sans', sans-serif;
 $heading-font-family: $base-font-family;
 
@@ -40,7 +40,7 @@ $base-z-index: 0;
 // Neat Colors
 $light-grey: $grey-100;
 $medium-grey: $grey;
-$dark-grey: $grey-700;
+$dark-grey: $grey-800;
 
 // Localization of grey/gray
 $gray: $grey;
@@ -52,7 +52,7 @@ $dark-gray: $dark-grey;
 
 // Font Colors
 $base-background-color: #fff;
-$base-font-color: $dark-gray;
+$base-font-color: $dark-grey;
 $action-color: $blue;
 
 // Border
