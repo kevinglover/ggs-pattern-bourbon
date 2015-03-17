@@ -2127,6 +2127,9 @@ picture {
 .selectize-control.single .selectize-input {
   border-color: #bdbdbd;
   box-shadow: 0 5px 4px 0px rgba(50, 50, 50, 0.1);
+  -webkit-transition: box-shadow 0.4s ease;
+  -moz-transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
   border-width: 1px;
   border-radius: 0;
   min-height: 45px;
@@ -2173,6 +2176,7 @@ picture {
 }
 .selectize-control.single .selectize-input.dropdown-active {
   border-bottom-width: 0px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .selectize-control.single .selectize-input.dropdown-active:hover, .selectize-control.single .selectize-input.dropdown-active:active {
   border-color: #bdbdbd;
@@ -2180,6 +2184,9 @@ picture {
 .selectize-control.single .selectize-input.dropdown-active:hover + .selectize-dropdown, .selectize-control.single .selectize-input.dropdown-active:active + .selectize-dropdown {
   border: 1px solid #bdbdbd;
   border-top-color: #eeeeee;
+}
+.selectize-control.single .selectize-input.dropdown-active + .selectize-dropdown {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .selectize-control.single .selectize-input.dropdown-active:after {
   color: #ffa000;
@@ -2193,6 +2200,9 @@ picture {
 .selectize-dropdown {
   box-shadow: 0 5px 4px 0px rgba(50, 50, 50, 0.1);
   background-color: #ffffff;
+  -webkit-transition: box-shadow 0.4s ease;
+  -moz-transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
 }
 .selectize-dropdown.single {
   border: 1px solid #bdbdbd;
