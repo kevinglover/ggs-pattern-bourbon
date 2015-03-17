@@ -2262,6 +2262,10 @@ picture {
   }
 }
 
+#masthead h1 {
+  margin-top: 0.333em;
+}
+
 .wrapper, #content > .full {
   padding: 0 0.75em;
   -webkit-box-sizing: border-box;

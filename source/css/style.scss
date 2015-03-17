@@ -7,6 +7,10 @@
   @include container;
 }
 
+#masthead h1{
+  @include site-title;
+}
+
 .wrapper, #content > .full{
   @include wrapper; 
 }
