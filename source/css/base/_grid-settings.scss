@@ -6,13 +6,13 @@ $gutter: 0.75em;
 $grid-columns: 4;
 $max-width: none;
 
-// Neat Breakpoints
-$medium-screen: em(640);
-$large-screen: em(888); 
-
 // Breakpoints
+$medium-screen: em(640);
 $medium-2-screen: em(720);
+
+$large-screen: em(888); 
 $large-2-screen: em(984);
+
 $huge-screen: em(1392);
 $huge-2-screen: em(1872);
 
