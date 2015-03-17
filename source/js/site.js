@@ -21,13 +21,18 @@
   $(function() {
     
     var $peakaboo = $("header.peakaboo"),
-        scrollBP = $peakaboo.offset().top + 100,
+        offset = $peakaboo.offset().top,
         $mini = $peakaboo.clone().addClass('mini');
         
         $mini.insertAfter($peakaboo);
     
-    $(window).on('scroll.peakaboo', function(){
-      
+    var scrollTimer = null;
+    $(window).scroll(function () {
+        handleScroll();
+    });
+
+   function handleScroll(){
+      var scrollBP = offset + $peakaboo.height()*0.75;
       var scrollTop = $(this).scrollTop();
       if (scrollTop > scrollBP){
         $mini.css({'display':'block'});
@@ -44,8 +49,7 @@
       else{
         $mini.removeClass('shadow');
       }
-      
-    });
+    }
     
   });
   
