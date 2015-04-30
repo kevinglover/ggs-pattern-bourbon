@@ -2308,6 +2308,7 @@ header.peakaboo .header-title {
   color: #ffffff;
 }
 header.peakaboo .header-title .section-title:after {
+  text-align: center;
   font-family: "Material-Design-Icons";
   speak: none;
   font-style: normal;
@@ -2349,6 +2350,11 @@ header.peakaboo.mini.shadow {
   -moz-transition: box-shadow 1s ease;
   transition: box-shadow 1s ease;
   box-shadow: 0 4px 6px 1px rgba(50, 50, 50, 0.16);
+}
+@media screen and (max-width: 25em) {
+  header.peakaboo.mini .header-title .section-title {
+    display: none;
+  }
 }
 header.peakaboo.mini .header-title .section-title:after {
   bottom: -4px;

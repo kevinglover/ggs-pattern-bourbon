@@ -66,6 +66,10 @@ header.peakaboo{
       @extend h4;
       .section-title{
 
+        @include media($small-screen-up-max) {
+          display:none;
+        }
+
         &:after{
           bottom:-4px;
           left:4px;
