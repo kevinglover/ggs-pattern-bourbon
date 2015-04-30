@@ -3,6 +3,10 @@
 
 A pattern library built with [Bourbon](http://bourbon.io/) and using principles from the [Golden Grid System](http://goldengridsystem.com). The goal is to create an accessible fluid grid system based on folding columns!
 
+### Demo
+You can see the [live demo here.](http://kevinglover.github.io/ggs-pattern-bourbon/)
+This is the contents public folder after you do the installation.
+
 ### Getting Started
 
 To run, just do the following from the command line 
