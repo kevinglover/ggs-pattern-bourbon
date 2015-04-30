@@ -10,36 +10,30 @@
 }
 
 @mixin small {
-  /* 13px / 18px */
   font-size: modular-scale(0);
   @include line-height(0);
 }
 @mixin normal {
-  /* 16px / 24px */
   font-size: modular-scale(1);
   @include line-height(1);
 }
 
 @mixin large {
-  /* 26 / 36px */
   font-size: modular-scale(2);
   @include line-height(2);
 }
 
 @mixin huge {
-  /* 42px / 48px */
   font-size: modular-scale(3);
   @include line-height(3);
 }
 
 @mixin massive {
-  /* 68px / 72px */
   font-size: modular-scale(4);
   @include line-height(4);
 }
 
 @mixin gigantic {
-  /* 110px / 120px */
   font-size: modular-scale(5);
   @include line-height(5);
 }
@@ -51,18 +45,15 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
   line-height: $base-line-height;
-  
+
   @include media($medium-screen-up) {
     font-size: 125%;
   }
-  
-  @include media($huge-screen-up) {
-    font-size: 150%;
-  }
-  
+
   @include media($huge-2-screen-up){
-    font-size: 175%;
+    font-size: 150%;
   }
 }
 
@@ -74,54 +65,79 @@ h5,
 h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
   clear:both;
+  display:inline-block;
+  width:100%;
+}
+
+@mixin site-title{
+  margin-top: 0.333em;
+  padding-bottom: 0.1em;
 }
 
 h1, h2 {
-  @include large;
+  @include huge;
+  line-height: 1.1em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-weight: $ultra-bold-font-weight;
+}
+
+h3,h4,h5,h6{
+  font-weight: $normal-font-weight;
 }
 
 h1{
-  margin-bottom: 0;
-
-  @include media($massive-screen-up) {
+  @include media($huge-2-screen-up){
     @include massive;
   }
-  @include media($huge-2-screen-up){
-    @include huge;
+
+  @include media($massive-screen-up) {
+    @include gigantic;
   }
 }
 
 h2 {
-  font-weight: normal;
-  margin-bottom: 0;
-  
   @include media($massive-screen-up) {
     @include huge;
   }
 }
 
 h3 {
+  @include large;
+  font-weight: $light-font-weight;
+  margin: modular-scale(-1) 0 modular-scale(-4);
+}
+
+h4{
   @include normal;
   margin: modular-scale(-2) 0 modular-scale(-4);
 }
 
-h4,h5,h6{
+h5,h6{
   margin: (modular-scale(-3)+0.1em) 0 modular-scale(-3);
+}
+
+h5{
+  font-size: 110%;
+}
+
+h6{
+  opacity:0.6;
 }
 
 p {
   margin: 0 0 $small-spacing;
 }
 
-header{
-  h1, h2{
-    +p{
-      font-size:120%;
-    }
-  }
+@mixin lead{
+    font-size:120%;
+    border-bottom: #{(1 / 16)}em dotted $grey-600;
+    margin: 0 0 modular-scale(-1);
+    padding: modular-scale(-1) 0 modular-scale(-2);
 }
 
 article{
@@ -159,4 +175,9 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+@include selection {
+  background-color: $amber-300;
+  color: $grey-900;
 }

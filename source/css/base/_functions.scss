@@ -50,7 +50,12 @@
   @return if($minus, $result * -1, $result);
 }
 
-//Strip units from a number
+// Strip units from a number
 @function strip-units($number) {
   @return $number / ($number * 0 + 1);
+}
+
+// Converts hex color + opacity to rgba
+@function color-opacity($color, $opacity) {
+    @return rgba($color, $opacity);
 }

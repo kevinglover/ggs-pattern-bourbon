@@ -1,31 +1,72 @@
 @import "bourbon";
 @import "base/grid-settings";
-@import "../../bower_components/neat/app/assets/stylesheets/_neat";
+@import "neat/neat";
 @import "base/base";
 
 #masthead, #figures, #content, footer .inner{
   @include container;
 }
 
-.wrapper{
+#masthead h1{
+  @include site-title;
+}
+
+@import "base/peakaboo";
+
+.wrapper, #content > .full{
   @include wrapper; 
 }
 
-ol {
-  > li {
-    background-color: #F4F5F7;
-    @include background-image( linear-gradient(to left, #FFF, #F4F5F7) );
-    float: left;
-    font-family: $lucida-grande;
-    position: relative;
-    @include transition( all 0.8s );
-    
-    &::after {
-      content: " ";
-      height: 23px;
-      @include position( absolute, 10px -13px 0 0 );
-      @include transform( rotate(45deg) skew(20deg, 30deg) );
-      width: 23px;
+#content > .half{
+  @include wrapper;
+  @include media($medium-2-screen-up){
+    width:50%;
+    float:left;
+  }
+}
+
+h1 a{ 
+  
+  img{
+    height: 1em;
+    display: inline-block;
+    opacity: 0.8;
+    padding-top: 12px;
+  }
+  
+  &:hover{
+    img{
+      opacity: 1;
     }
   }
+}
+
+p.lead{
+  @include lead;
+}
+
+#content{
+  ul.default {
+    @extend %default-ul;
+  }
+
+  ol.default {
+    @extend %default-ol;
+  }
+  
+  ol.circle {
+    @extend %circle-ol;
+  }
+  
+  ul.circle {
+    @extend %circle-ul;
+  }
+}
+
+
+footer.main{
+  margin-top:1.5em;
+  padding:1.5em 0;
+  background-color:$grey-800;
+  color:$grey-100;
 }

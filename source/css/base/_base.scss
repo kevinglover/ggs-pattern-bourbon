@@ -9,13 +9,19 @@
 
 @import "functions";
 @import "variables";
+@import "mixins";
 
 // Neat Settings -- uncomment if using Neat -- must be imported before Neat
 @import "grid-settings";
 
 @import "wrappers";
+@import "shadows";
 @import "buttons";
 @import "forms";
 @import "lists";
 @import "tables";
 @import "typography";
+
+// Core Plugins
+
+@import "plugins/selectize/material-theme";
