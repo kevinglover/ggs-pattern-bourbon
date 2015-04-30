@@ -6,6 +6,7 @@ $em: $font-size * 1;
 
 // Typography
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,400italic);
+
 $base-font-family:'Fira Sans', sans-serif;
 $heading-font-family: $base-font-family;
 
@@ -51,7 +52,7 @@ $dark-gray: $dark-grey;
 
 
 // Font Colors
-$base-background-color: #fff;
+$base-background-color: $white;
 $base-font-color: $dark-grey;
 $action-color: $blue;
 

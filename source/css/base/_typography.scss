@@ -47,17 +47,13 @@ body {
   font-size: $base-font-size;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
-  
+
   @include media($medium-screen-up) {
     font-size: 125%;
   }
-  
-  @include media($huge-screen-up) {
-    font-size: 150%;
-  }
-  
+
   @include media($huge-2-screen-up){
-    font-size: 175%;
+    font-size: 150%;
   }
 }
 
@@ -79,6 +75,7 @@ h6 {
 
 @mixin site-title{
   margin-top: 0.333em;
+  padding-bottom: 0.1em;
 }
 
 h1, h2 {
@@ -97,7 +94,7 @@ h1{
   @include media($huge-2-screen-up){
     @include massive;
   }
-  
+
   @include media($massive-screen-up) {
     @include gigantic;
   }
