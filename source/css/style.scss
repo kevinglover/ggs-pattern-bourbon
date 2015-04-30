@@ -1,6 +1,6 @@
 @import "bourbon";
 @import "base/grid-settings";
-@import "../../bower_components/neat/app/assets/stylesheets/_neat";
+@import "neat/neat";
 @import "base/base";
 
 #masthead, #figures, #content, footer .inner{
@@ -10,6 +10,8 @@
 #masthead h1{
   @include site-title;
 }
+
+@import "base/peakaboo";
 
 .wrapper, #content > .full{
   @include wrapper; 
