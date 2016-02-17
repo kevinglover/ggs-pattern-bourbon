@@ -9,7 +9,9 @@ To run, just do the following from the command line
 
 1. `npm install`
 2. `npm install -g grunt-cli`
-3. `grunt`  
+3. `bower install`
+4. `gem install sass`
+5. `grunt`  
 
 To run the server, just do the following in the command line 
 
