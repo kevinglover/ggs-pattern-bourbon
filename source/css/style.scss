@@ -4,7 +4,7 @@
 @import "base/base";
 
 #masthead, #figures, #content, footer .inner{
-  @include container;
+  // @include container;
 }
 
 #masthead h1{
@@ -14,7 +14,7 @@
 @import "base/peakaboo";
 
 .wrapper, #content > .full{
-  @include wrapper; 
+  @include wrapper;
 }
 
 #content > .half{
@@ -25,15 +25,15 @@
   }
 }
 
-h1 a{ 
-  
+h1 a{
+
   img{
     height: 1em;
     display: inline-block;
     opacity: 0.8;
     padding-top: 12px;
   }
-  
+
   &:hover{
     img{
       opacity: 1;
@@ -53,11 +53,11 @@ p.lead{
   ol.default {
     @extend %default-ol;
   }
-  
+
   ol.circle {
     @extend %circle-ol;
   }
-  
+
   ul.circle {
     @extend %circle-ul;
   }

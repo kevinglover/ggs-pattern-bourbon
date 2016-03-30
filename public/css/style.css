@@ -1,25 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,400italic);
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
+*, *::after, *::before {
   box-sizing: inherit;
 }
 
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
+*, *::after, *::before {
   box-sizing: inherit;
 }
 
@@ -139,14 +131,10 @@ img {
 }
 
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
+*, *::after, *::before {
   box-sizing: inherit;
 }
 
@@ -2106,7 +2094,7 @@ picture {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background-color: #1a9dec;
+  background-color: #1b9dec;
   background-color: #1da7ee;
   background-image: -webkit-linear-gradient(top, #1da7ee, #178ee9);
   background-image: linear-gradient(to bottom,#1da7ee, #178ee9);
@@ -2114,7 +2102,7 @@ picture {
   box-shadow: "0 1px 0 rgba(0,0,0,0.2),inset 0 1px rgba(255,255,255,0.03)";
 }
 .selectize-control.multi .selectize-input [data-value].active {
-  background-color: #0084d4;
+  background-color: #0085d4;
   background-color: #008fd8;
   background-image: -webkit-linear-gradient(top, #008fd8, #0075cf);
   background-image: linear-gradient(to bottom,#008fd8, #0075cf);
@@ -2235,35 +2223,6 @@ picture {
 }
 .selectize-dropdown [data-selectable] .highlight {
   background: rgba(255, 224, 130, 0.5);
-}
-
-#masthead, #figures, #content, footer .inner {
-  margin: 0 5.55555556%;
-}
-@media screen and (min-width: 45em) {
-  #masthead, #figures, #content, footer .inner {
-    margin: 0 16.66666667%;
-  }
-}
-@media screen and (min-width: 55.5em) {
-  #masthead, #figures, #content, footer .inner {
-    margin: 0 5.55555556%;
-  }
-}
-@media screen and (min-width: 87em) {
-  #masthead, #figures, #content, footer .inner {
-    margin: 0 16.66666667%;
-  }
-}
-@media screen and (min-width: 156em) {
-  #masthead, #figures, #content, footer .inner {
-    margin: 0 27.77777778%;
-  }
-}
-@media screen and (min-width: 156em) {
-  #masthead, #figures, #content, footer .inner {
-    margin: 0 27.77777778%;
-  }
 }
 
 #masthead h1, #masthead header.peakaboo .header-title, header.peakaboo #masthead .header-title {
